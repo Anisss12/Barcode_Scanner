@@ -49,7 +49,6 @@ export async function PUT(req) {
     return NextResponse.json({ message: "Data not found" }, { status: 404 });
   }
 }
-import { NextResponse } from "next/server";
 
 export async function DELETE(req) {
   try {
