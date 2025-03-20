@@ -1,0 +1,84 @@
+[
+  {
+    "id": "Gj-s3ftK12CNW28Z9hR05",
+    "barcode": "56789012",
+    "design": "KB9005",
+    "name": "Epsilon",
+    "sizes": [
+      "M",
+      "XL",
+      "XXL",
+      "L"
+    ],
+    "colors": [
+      "Green",
+      "Blue",
+      "Purple"
+    ],
+    "price": "600",
+    "date": "2025-03-18T15:25:57.013Z"
+  },
+  {
+    "id": "Gj-s3ftK12CNW28Z9hR08",
+    "barcode": "89012345",
+    "design": "KB9008",
+    "name": "Theta",
+    "sizes": [
+      "XXL",
+      "L"
+    ],
+    "colors": [
+      "Blue",
+      "Orange"
+    ],
+    "price": "680",
+    "date": "2025-03-18T15:28:57.013Z"
+  },
+  {
+    "id": "Gj-s3ftK12CNW28Z9hR09",
+    "barcode": "90123456",
+    "design": "KB9009",
+    "name": "Iota",
+    "sizes": [
+      "M",
+      "L",
+      "XXL"
+    ],
+    "colors": [
+      "Purple",
+      "Green"
+    ],
+    "price": "700",
+    "date": "2025-03-18T15:29:57.013Z"
+  },
+  {
+    "id": "Gj-s3ftK12CNW28Z9hR10",
+    "barcode": "01234567",
+    "design": "KB9010",
+    "name": "Kappa",
+    "sizes": [
+      "S",
+      "XL"
+    ],
+    "colors": [
+      "Red",
+      "Blue"
+    ],
+    "price": "580",
+    "date": "2025-03-18T15:30:57.013Z"
+  },
+  {
+    "id": "GhbuU_Nk60ItBKxosvBdm",
+    "barcode": "12345678",
+    "design": "KB72+2-",
+    "sizes": [
+      "M",
+      "XL"
+    ],
+    "colors": [
+      "Green"
+    ],
+    "price": "100",
+    "date": "2025-03-20T07:12:51.797Z"
+  }
+]
