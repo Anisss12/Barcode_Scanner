@@ -49,24 +49,44 @@ export async function PUT(req) {
     return NextResponse.json({ message: "Data not found" }, { status: 404 });
   }
 }
+import { NextResponse } from "next/server";
 
 export async function DELETE(req) {
-  const existingData = loadData();
-  const { ids } = await req.json(); // Expect an array of IDs
+  try {
+    const existingData = loadData();
+    const { ids } = await req.json(); // Expect an array of IDs
 
-  // Filter out the items to delete
-  const deletedData = existingData.filter((item) => ids.includes(item.id));
+    if (!ids || !Array.isArray(ids)) {
+      return NextResponse.json(
+        { message: "Invalid request: 'ids' must be an array" },
+        { status: 400 }
+      );
+    }
 
-  if (deletedData.length > 0) {
-    // Save the remaining data
-    const updatedData = existingData.filter((item) => !ids.includes(item.id));
-    saveData(updatedData);
+    // Filter out the items to delete
+    const deletedData = existingData.filter((item) => ids.includes(item.id));
 
+    if (deletedData.length > 0) {
+      // Save the remaining data
+      const updatedData = existingData.filter((item) => !ids.includes(item.id));
+      saveData(updatedData);
+
+      return NextResponse.json(
+        { message: "Data deleted successfully", data: deletedData },
+        { status: 200 }
+      );
+    } else {
+      return NextResponse.json(
+        { message: "No matching data found" },
+        { status: 404 }
+      );
+    }
+  } catch (error) {
+    console.error("Delete error:", error);
     return NextResponse.json(
-      { message: "Data deleted successfully", data: deletedData },
-      { status: 200 }
+      { message: "Internal server error" },
+      { status: 500 }
     );
-  } else {
-    return NextResponse.json({ message: "Data not found" }, { status: 404 });
   }
+}
 }
